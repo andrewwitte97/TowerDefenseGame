@@ -34,17 +34,17 @@ public class Node : MonoBehaviour {
 	{
 		if(EventSystem.current.IsPointerOverGameObject())
 			return;
+
+		if (!buildManager.CanBuild)
+			return;
 		
-		
-			if (!buildManager.CanBuild)
-				return;
-		
-			if(turret != null)
-			{
-				
-			}
-			
+		if(turret != null) {
+
 			buildManager.BuildTurretOn (this);
+
+		}
+			
+			
 			
 	}
 	

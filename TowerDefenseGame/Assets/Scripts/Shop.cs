@@ -8,7 +8,6 @@ public class Shop : MonoBehaviour
 
     public TurretBlueprint standardTurret;
     public TurretBlueprint missleLauncher;
-    public Text money;
 
     BuildManager buildManager;
 
