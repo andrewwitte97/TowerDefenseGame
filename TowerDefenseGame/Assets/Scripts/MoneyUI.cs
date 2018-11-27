@@ -6,10 +6,10 @@ using UnityEngine;
 public class MoneyUI : MonoBehaviour {
 
 
-	public Text moneyText;
+	//public Text moneyText;
 	
 	// Update is called once per frame
 	void Update () {
-		moneyText.text = "$" + PlayerStats.Money.ToString();
+		//moneyText.text = "$" + PlayerStats.Money.ToString();
 	}
 }
