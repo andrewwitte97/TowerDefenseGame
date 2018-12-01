@@ -67,12 +67,16 @@ public class Turret : MonoBehaviour {
 		partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 		
 		
+        //If the fire countdown is less than or equal to 0
 		if (fireCountdown <= 0f)
 		{
+            //Shoot a bullet
 			Shoot();
+            //firecountdown will be fire rate per one second
 			fireCountdown = 1f / fireRate;
 		}
 		
+        
 		fireCountdown -= Time.deltaTime;
 		
 		

@@ -3,7 +3,13 @@ guid: a9ca3cd6068b56c4e98d54e1856dda07
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - standardTurretPrefab: {fileID: 1055218057664224, guid: f931210580fe7e74ba851ba50bcf04f6,
+      type: 2}
+  - missleLauncherPrefab: {fileID: 1809132441774408, guid: 69878c593c4fda54db7a979635c533d5,
+      type: 2}
+  - buildEffect: {fileID: 1479596045142650, guid: 49bfa962af51e8441910ccfb19e80216,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
