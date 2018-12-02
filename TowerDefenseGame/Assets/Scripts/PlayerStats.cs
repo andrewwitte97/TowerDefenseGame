@@ -1,22 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour {
+    /*
+    //static variables carry over between scene loads
+    //so setting static int money to startMoney would be bad
+    public static int Money;
+    public int startMoney = 400;
 
-	public static int Money;
-	public int startMoney = 400;
-    public Text moneyText;
-
-    void Start()
-	{
-		Money = startMoney;
-        moneyText.text = "Money: $" + Money.ToString();
-	}
-
-    void Update()
+    private void Start()
     {
-        moneyText.text = "Money: $" + Money.ToString();
+        Money = startMoney;
     }
+    */
 }

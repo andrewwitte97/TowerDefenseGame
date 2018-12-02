@@ -6,24 +6,29 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
 
+    //The turrets to select
     public TurretBlueprint standardTurret;
-    public TurretBlueprint missleLauncher;
+    public TurretBlueprint missileLauncher;
 
-    //BuildManager buildManager;
+    //Buildmanager instance
+    BuildManager buildManager;
 
     void Start()
     {
-        //buildManager = BuildManager.instance;
+        buildManager = BuildManager.instance;
     }
+
 
     public void SelectStandardTurret()
     {
-        //buildManager.SelectTurretToBuild(standardTurret);
+        Debug.Log("Standard turret selected.");
+        buildManager.selectTurretToBuild(standardTurret);
     }
 
-    public void SelectMissleLauncher()
+    public void SelectMissileLauncher()
     {
-        //buildManager.SelectTurretToBuild(missleLauncher);
+        Debug.Log("Missile launcher selected.");
+        buildManager.selectTurretToBuild(missileLauncher);
     }
 
 }
