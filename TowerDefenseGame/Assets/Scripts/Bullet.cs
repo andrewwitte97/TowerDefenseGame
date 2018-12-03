@@ -53,7 +53,7 @@ public class Bullet : MonoBehaviour {
 		}
 		
 		Destroy(gameObject);
-        AddMoney(100);
+        AddMoney(5);
 	}
 	
 	void Explode()

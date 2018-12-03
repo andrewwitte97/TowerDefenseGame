@@ -266,6 +266,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelectMissileLauncher
       objectReference: {fileID: 0}
+    - target: {fileID: 114976953912071222, guid: e2577fc6d2fbf7d4383efc2ba22c580b,
+        type: 2}
+      propertyPath: m_Text
+      value: $250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2577fc6d2fbf7d4383efc2ba22c580b, type: 2}
   m_IsPrefabAsset: 0
@@ -640,7 +645,7 @@ MonoBehaviour:
     cost: 100
   missileLauncher:
     prefab: {fileID: 1809132441774408, guid: 69878c593c4fda54db7a979635c533d5, type: 2}
-    cost: 100
+    cost: 250
 --- !u!1 &8346206
 GameObject:
   m_ObjectHideFlags: 0
