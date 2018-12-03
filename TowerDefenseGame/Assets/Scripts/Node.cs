@@ -13,7 +13,7 @@ public class Node : MonoBehaviour {
     //Controls the color that the node changes to when hovered over,
     //as defined in editor
     public Color hoverColor;
-
+    public Color notEnoughMoneyColor;
     //Saves the turret that is currently on the node
     [Header("Optional")]
     public GameObject turret;
@@ -22,6 +22,7 @@ public class Node : MonoBehaviour {
     private Renderer rend;
     //Stores the initial color of the node
     private Color startColor;
+   
     public Vector3 positionOffset;
 
     BuildManager buildManager;
@@ -40,14 +41,16 @@ public class Node : MonoBehaviour {
     void OnMouseDown()
     {
 
-        //if (EventSystem.current.IsPointerOverGameObject())
-        //    return;
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
 
         //If there's no turret to build selected
-        //if (!buildManager.CanBuild)
-        //{
-        //    return;
-        //}
+        if (!buildManager.CanBuild)
+        {
+            return;
+        }
+
+
 
         //If there's already a turret on the node
         if (turret != null)
@@ -65,11 +68,21 @@ public class Node : MonoBehaviour {
     void OnMouseEnter()
     {
 
-        //if (!buildManager.CanBuild)
-        //    return;
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        //If there's no turret to build selected
+        if (!buildManager.CanBuild)
+            return;
         
-        //the color of the object becomes hoverColor
-        rend.material.color = hoverColor;
+        if (buildManager.HasMoney)
+        {
+            rend.material.color = hoverColor;
+        }
+        else
+        {
+            rend.material.color = notEnoughMoneyColor;
+        }
 
         
     }

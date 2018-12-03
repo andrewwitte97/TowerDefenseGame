@@ -53,6 +53,7 @@ public class Bullet : MonoBehaviour {
 		}
 		
 		Destroy(gameObject);
+        AddMoney(100);
 	}
 	
 	void Explode()
@@ -66,6 +67,13 @@ public class Bullet : MonoBehaviour {
 			}
 		}
 	}
+
+    //Adds $100 to the player's bank when they kill an enemy
+    //TO-DO: Find a better home for this and make it accessible via the editor
+    void AddMoney(int Money)
+    {
+        PlayerStats.Money = PlayerStats.Money + Money;
+    }
 	
 	void Damage(Transform enemy)
 	{

@@ -32,7 +32,7 @@ public class BuildManager : MonoBehaviour {
     //Can the turret be built?
     public bool CanBuild { get { return turretToBuild != null; } }
     //Does the player have enough money to build it?
-    //public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
+    public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
 
     //Called when the game starts.
     //Sets the turret to build on the nodes to the Standard turret.
@@ -41,7 +41,7 @@ public class BuildManager : MonoBehaviour {
 	
 	public void BuildTurretOn (Node node)
 	{
-        /*
+        
         //Does the player have enough money to build a turret?
         if (PlayerStats.Money < turretToBuild.cost)
         {
@@ -54,7 +54,7 @@ public class BuildManager : MonoBehaviour {
         PlayerStats.Money -= turretToBuild.cost;
         
         Debug.Log("Turret built. Money left: " + PlayerStats.Money);
-		*/
+		
 		//Build a turret
 		GameObject turret = (GameObject) Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity); 
         node.turret = turret;
