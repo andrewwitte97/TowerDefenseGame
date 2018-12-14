@@ -46,7 +46,9 @@ public class Bullet : MonoBehaviour {
 		if (explosionRadius > 0f)
 		{
 			Explode();
-		}
+            Damage(target);
+            
+        }
 		else
 		{
 			Damage(target);
@@ -61,7 +63,7 @@ public class Bullet : MonoBehaviour {
 		Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
 		foreach(Collider collider in colliders)
 		{
-			if (collider.tag == "Enemy")
+			if (collider.CompareTag("Enemy"))
 			{
 				Damage(collider.transform);
 			}
@@ -78,6 +80,7 @@ public class Bullet : MonoBehaviour {
 	void Damage(Transform enemy)
 	{
 		Destroy(enemy.gameObject);
+        Debug.Log("Enemy destroyed.");
 	}
 	
 	void OnDrawGizmosSelected()
