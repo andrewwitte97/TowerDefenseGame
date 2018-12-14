@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour {
 	public float scrollSpeed = 5f;
 	public float minY = 10f;
 	public float maxY = 80f;
+    
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,7 +21,7 @@ public class CameraController : MonoBehaviour {
 		
 		if (!doMovement)
 			return;
-		
+        
 		if (Input.GetKey("d") || Input.mousePosition.x >= (Screen.width - panBorderThickness))
 		{
 			transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
@@ -42,6 +43,8 @@ public class CameraController : MonoBehaviour {
         {
             transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
         }
+        
+
 
         //Zoom in and out
         float scroll = Input.GetAxis("Mouse ScrollWheel");
